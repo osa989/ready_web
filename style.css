@@ -95,6 +95,7 @@ body {
   margin-bottom: 20px;
   color: var(--text-color);
   position: relative;
+  display: none;
 }
 .container .result p {
   display: inline;
