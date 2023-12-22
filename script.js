@@ -1,7 +1,8 @@
 const recordBtn = document.querySelector(".record"),
   result = document.querySelector(".result"),
-  inputLanguage = document.querySelector("#language");
-
+  inputLanguage = document.querySelector("#language-write"),
+  outputLanguage = document.querySelector("#language-read");
+  
 
 let SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition,recognition,recording = false;
@@ -90,3 +91,21 @@ function populateLanguages() {
 }
 
 populateLanguages();
+
+function speakTool() {
+  var text = result.textContent;
+  responsiveVoice.speak(text,outputLanguage.value);
+}
+
+function populateLanguagesVoices() {
+  languagesVoices.forEach((lang) => {
+    var option = document.createElement("option");
+    option.value = lang.name;
+    option.innerHTML = lang.name;
+    outputLanguage.appendChild(option);
+  });
+}
+
+populateLanguagesVoices();
+
+

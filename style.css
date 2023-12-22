@@ -33,7 +33,7 @@ body {
   margin-bottom: 10px;
 }
 .container .options select {
-  width: 100%;
+  width: fit-content;
   padding: 10px;
   border: 1px solid var(--light-text-color);
   border-radius: 5px;
@@ -94,6 +94,7 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
   color: var(--text-color);
+  position: relative;
 }
 .container .result p {
   display: inline;
@@ -119,3 +120,16 @@ body {
 #textInput:focus{
   outline: none;
 }
+.result span{
+
+  position: absolute;
+  bottom: 5px;
+  left: 13px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.result span ion-icon{
+  font-size: 25px;
+
+}
+

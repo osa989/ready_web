@@ -13,7 +13,8 @@
       <div class="options">
         <div class="language">
           <p>Language</p>
-          <select name="input-language" id="language"></select>
+          <select name="input-language" id="language-write"></select>
+          <select name="output-language" id="language-read"></select>
         </div>
       </div>
       <div class="line"></div>
@@ -24,6 +25,7 @@
       placeholder="Text will be shown here"
       >
       <p class="interim"></p>
+      <span onclick="speakTool()"><ion-icon name="volume-medium-outline"></ion-icon></span>
     </div>
     <div class="input-section">
 
@@ -38,23 +40,25 @@
         <ion-icon name="camera-outline"></ion-icon>
       </button>
     </div>
- 
-    </div>
-
-    <!-- IONICONS -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-
-    <!-- LANGUAGES -->
-    <script src="languages.js"></script>
-
-    <!-- SCRIPT -->
-    <script src="script.js"></script>
-  </body>
+    
+  </div>
+  
+  <!-- IONICONS -->
+  <script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  
+  <!-- LANGUAGES -->
+  <script src="languages.js"></script>
+  <script src="languages_voice.js"></script>
+  
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=22OfGhVs"></script>
+</body>
 </html>
