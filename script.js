@@ -1,9 +1,9 @@
 const recordBtn = document.querySelector(".record"),
+ result = document.querySelector(".result"),
 inputLanguage = document.querySelector("#language-write"),
 outputLanguage = document.querySelector("#language-read"),
 inputField = document.querySelector("#textInput");
 
-var result = document.querySelector(".result");
 
 let SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition,recognition,recording = false;
@@ -111,12 +111,32 @@ populateLanguagesVoices();
 
 function handleEnter(event) {
   if (event.key === 'Enter') {
-    var inputValue = inputField.value;
-    inputField.value = ''; 
-  
-    result.textContent = inputValue;
-    result.style.display ="block"
+    var inputValue = document.querySelector('#textInput');
+    var chatSection = document.querySelector('#chat-section');
+    if (inputValue.value.trim() !== "") {
+      var outputDiv = document.createElement('div');
+      outputDiv.className='result';
+      outputDiv.innerHTML = `     
+
+      <p class="interim"></p>
+      <p style="width: 100%;">${inputValue.value}</p>
+      <span id="voice-icon" onclick="speakTool()"><ion-icon name="volume-medium-outline"></ion-icon></span>
+    `;
+      
+      // Append the new output div to the container
+      chatSection.appendChild(outputDiv);
+
+      // Clear the input field
+      inputValue.value = "";
+    }
   }
 }
 
+
+
+
+// function removeOutput(element) {
+//   var outputDiv = element.parentNode;
+//   outputDiv.parentNode.removeChild(outputDiv);
+// }
 

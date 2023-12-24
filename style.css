@@ -26,6 +26,9 @@ body {
   padding: 20px;
   border-radius: 10px;
   background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container .heading {
   font-size: 25px;
@@ -95,7 +98,8 @@ body {
   margin-bottom: 20px;
   color: var(--text-color);
   position: relative;
-  display: none;
+  /* display: none;   */
+  /* resize: none; */
 }
 .container .result p {
   display: inline;
@@ -131,6 +135,15 @@ body {
 }
 .result span ion-icon{
   font-size: 25px;
+
+}
+
+#chat-section{
+  width: 600px;
+  height: 50vh;
+  
+  overflow-y: auto;
+  border: #000 solid 1px;
 
 }
 
